@@ -87,19 +87,16 @@ def stats(start=None, end=None):
     # Run if statement if no end date entered.
     if not end:
         # Pass an asterisk to indicate multiple statistical parts to our query.
-        results = session.query(*sel)\
-                    # Filter for these statistics between the start date and the
-                    # end of the data.
-                    .filter(Measurement.date >= start)\
-                    .filter(Measurement.date <= end).all()
+        results = session.query(*sel).\
+                    filter(Measurement.date >= start).\
+                    filter(Measurement.date <= end).all()
         # Unravel and return JSON.
         temps = list(np.ravel(results))
         return jsonify(temps)
 
     # If there is an end date provided run the following.
-    results = session.query(*sel)\
-                # Filter for these statistics between the two dates.
-                .filter(Measurement.date >= start)\
-                .filter(Measurement.date <= end).all()
+    results = session.query(*sel).\
+                filter(Measurement.date >= start).\
+                filter(Measurement.date <= end).all()
     temps = list(np.ravel(results))
     return jsonify(temps=temps)
