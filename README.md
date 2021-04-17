@@ -57,9 +57,11 @@ Another query we could run is to find **the average temperature by station, by m
 
 ```py
 # Run the query to find the average temperature by station, by month.
-avg_stn_temps = session.query(Measurement.station, extract('month', Measurement.date), func.avg(Measurement.tobs))\
-        .group_by(Measurement.station, extract('month', Measurement.date))\
-        .order_by(extract('month', Measurement.date), Measurement.station)\
+avg_stn_temps = session.query(Measurement.station,
+                              extract('month', Measurement.date),
+                              func.avg(Measurement.tobs)) \
+        .group_by(Measurement.station, extract('month', Measurement.date)) \
+        .order_by(extract('month', Measurement.date), Measurement.station) \
         .all()
 # Convert the list to a DataFrame.
 avg_stn_temps_df = pd.DataFrame(avg_stn_temps, columns=['Station', 'Month', 'Average Temp'])
@@ -76,7 +78,9 @@ If we are still focusing on June and December as our main comparisons, we would 
 ```py
 # FILTER BY JUNE AND DECEMBER
 # Run the query to find the average temperature by station, by month.
-avg_stn_temps = session.query(Measurement.station, extract('month', Measurement.date), func.avg(Measurement.tobs))\
+avg_stn_temps = session.query(Measurement.station,
+                              extract('month', Measurement.date),
+                              func.avg(Measurement.tobs)) \
         .filter((extract('month', Measurement.date) == 6) | (extract('month', Measurement.date) == 12))\
         .group_by(Measurement.station, extract('month', Measurement.date))\
         .order_by(extract('month', Measurement.date), Measurement.station)\
