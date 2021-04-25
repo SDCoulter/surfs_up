@@ -97,4 +97,4 @@ Which produces our **June-December average temperatures by station (by month)** 
 
 ## Context
 
-This is the result of Module 8 of the University of Toronto School of Continuing Studies Data Analysis Bootcamp Course - **Python and SQLite** - Advanced Data Storage and Retrieval. Following the guidance of the module we end up pushing this selection of files to GitHub.
+This is the result of Module 9 of the University of Toronto School of Continuing Studies Data Analysis Bootcamp Course - **Python and SQLite** - Advanced Data Storage and Retrieval. Following the guidance of the module we end up pushing this selection of files to GitHub.
