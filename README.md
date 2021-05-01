@@ -25,9 +25,9 @@ After the query is returned, we turn it into a list with `.all()`, and then a Da
 
 ### Query Takeaways
 
-- The **mean** temperature is 5 degrees higher in June than in December. It's not unexpected that June is warmer on average than December, as Oahu is an island in the Norther Hemisphere.
+- The **mean** temperature is 5 degrees higher in June than in December. It is not unexpected that June is warmer on average than December, as Oahu is an island in the Northern Hemisphere.
 - The **minimum temperature** statistic shows the largest difference between the two months, with June a full 8 degrees higher than December. For December, this minimum temperature is 4 standard deviations from the mean though, so this may be an outlier and would need to be investigated further. For June, the minimum is only about 3 standard deviations from the mean, likely meaning a tighter spread of temperatures.
-- The **maximum temperature** has a difference of only 2 degrees, again this could be an outlier, as the differences in the other temperature measurements are much larger when comparing months. We would need to investigate how often temperatures were getting near the max, which given how far from the mean it is would likely mean it is a rare occurrence.
+- The **maximum temperature** has a difference of only 2 degrees, again this could be an outlier, as the differences in the other temperature measurements are much larger when comparing months. We would need to investigate how often temperatures were getting near the max, which given how far from the mean it is would likely imply it is a rare occurrence.
 - The **quartile spread** of temperatures seems similar for both June and December, with half of the temperatures falling in a 4-5-degree range. This would mean that you could, on a random day in either of those months, have a 50% chance of having the temperature fall in these ranges. This would allow you to plan around the weather with a good deal of accuracy.
 
 ## Challenge - Summary
